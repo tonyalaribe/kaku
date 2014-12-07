@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Bootstrap</title>
+  <title>kaku.com.ng | Search</title>
   <meta name="description" content="This is an awesome Bootstap boiler plate, scaffolded by slush bootstrap">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,9 +18,54 @@
 </head>
 
 
-<body class="search">
+<body class="searchpg">
   <div class="container">
-    
+    <div class="searchpg-nav">
+      <img src="assets/images/KakuLogo.png"/>
+      <div  class="pull-right">
+        <a class="white">Home</a>
+        <a class="white">About</a>
+        <a class="white">Blog</a>
+        <a class="white">Login</a>
+        <a class="btn btn-lg btn-info blue-btn" >Signup</a>
+      </div>
+    </div>
+    <div style="-webkit-transform-style: preserve-3d;-moz-transform-style: preserve-3d;transform-style: preserve-3d;">
+      <div align="center" class="white" style="position: relative; top:50%; transform:translateY(50%);">
+        <h2>Looking for Amazing Places to Hangout?</h2>
+        <h3>You've come to the right place</h3>
+        <br/>
+         <form role="form" class="form-inline">
+            <div class="form-group">
+              <label class="sr-only" for="searchLocation">location</label>
+              <select class="form-control input-lg" id="searchLocation" placeholder="Choose a Location" >
+                <option>Choose a Location</option>
+                <option>2</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label class="sr-only" for="searchBudget">budget</label>
+              <select class="form-control input-lg" id="searchBudget" placeholder="Your Budget Range" >
+                <option>Your Budget Range</option>
+                <option>2</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label class="sr-only" for="searchBudget">service</label>
+              <select class="form-control input-lg" id="searchService" placeholder="Select a Service" >
+                <option>Select a Service</option>
+                <option>2</option>
+              </select>
+            </div>
+            <br/><br/>
+            <button type="submit" class="btn btn-lg btn-info">Search</button>
+        </form>
+        
+      </div>
+      
+    </div>
   </div>
   <script src="assets/scripts/vendor.min.js"></script>
 
