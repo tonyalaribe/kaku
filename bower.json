@@ -5,12 +5,9 @@
   "dependencies": {
     "bootstrap-less": "latest",
     "modernizr": "latest",
-    "jquery": "latest",
     "fontawesome": "latest",
     "angularjs": "latest",
-    "angucomplete-alt": "~0.0.33",
     "angular-facebook": "~0.2.3",
-    "ng-flow": "~2.5.1",
     "ui.bootstrap": "~0.12.0",
     "allmighty-autocomplete": "*"
   }
