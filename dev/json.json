@@ -1,0 +1,38 @@
+
+main.js:58 Object 
+
+{id: "1008564565826092", 
+    email: "anthonyalaribe@gmail.com", 
+    first_name: "Anthony", 
+    gender: "male", 
+    last_name: "Alaribe"
+}
+
+
+email: "anthonyalaribe@gmail.com"
+
+first_name: "Anthony"
+gender: "male"
+id: "1008564565826092"
+last_name: "Alaribe"
+link: "https://www.facebook.com/app_scoped_user_id/1008564565826092/"locale: 
+"en_US"name: "Anthony Alaribe"
+timezone: 1
+updated_time: "2014-11-01T22:34:20+0000"
+verified: true__proto__: 
+
+Object
+
+
+main.js:62 
+
+Object {
+    data: Object
+}
+
+data: Objectheight: 180
+is_silhouette: false
+url: "https://m.ak.fbcdn.net/profile.ak/hprofile-ak-xfp1/v/t1.0-1/10435539_945705012112048_5383661794643168605_n.jpg?oh=21ff782a9f07a89c1465d0e40927bd2f&oe=553FC5A1&__gda__=1426258644_fdc347ab37cf50e9aed9aceeac637c1f"
+width: 180
+__proto__: Object
+__proto__: Object

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>kaku.com.ng | Search</title>
+  <meta name="description" content="This is an awesome Bootstap boiler plate, scaffolded by slush bootstrap">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="assets/styles/app.min.css">
+
+  <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.1/json3.min.js"></script>
+        <![endif]-->
+
+  <script src="assets/scripts/modernizr.min.js"></script>
+
+
+  <style type="text/css">
+    .searchpg{
+        background-image:url(assets/images/comingsoon.jpg);
+    }
+  </style>
+
+</head>
+
+
+<body class="searchpg" ng-app="app">
+  <div class="container">
+    <div class="searchpg-nav">
+      <img src="assets/images/KakuLogo.png"/>
+      <div  class="pull-right" ng-controller="LoginCtrl">
+        <a class="white">Home</a>
+        <a class="white">About</a>
+        <a ng-hide="loggedIn"  class="btn btn-lg btn-info blue-btn" ng-click="open(sm)">Login</a>
+         <div class="btn-group" ng-show="loggedIn">
+          <button type="button" class="btn  dropdown-toggle profile-dd" data-toggle="dropdown">
+              <img src="[[pic.data.url]]" class="img-circle profile-dd-pic"/>
+          &nbsp;[[user.first_name]] [[user.last_name]] &nbsp;<span class="fa fa-chevron-down"></span>
+          </button>
+          <ul class="dropdown-menu profile-dd-dd" role="menu">
+            <li><a href="#" class="fa fa-user">&nbsp;&nbsp;&nbsp;Your Profile </a></li>
+            <li><a href="#" class="fa fa-star-o">&nbsp;&nbsp;&nbsp;Favorites </a></li>
+            <li><a href="#" class="fa fa-wrench">&nbsp;&nbsp;&nbsp;Settings </a></li>
+            <li><a href="#" ng-click="logout()" class="fa fa-unlock-alt">&nbsp;&nbsp;&nbsp;Logout </a></li>
+          </ul>
+        </div>
+ 
+      </div>
+    </div>
+    <div style="-webkit-transform-style: preserve-3d;-moz-transform-style: preserve-3d;transform-style: preserve-3d;">
+      <div align="center" class="white" style="position: relative; top:50%; transform:translateY(50%);">
+        <h2>Looking for Amazing Places to Hangout?</h2>
+        <h3>You've come to the right place</h3>
+        <br/>
+         <form role="form" class="form-inline" ng-controller="SearchCtrl"
+             method="GET" action="http://localhost:8080/q">
+            <div class="form-group">
+              <label class="sr-only" for="l">location</label>
+              <autocomplete placeholder="City ex ikeja, calabar,"
+              attr-input-id="l"
+              click-activation="true"
+              attr-input-class="form-control  input-lg"
+              ng-model="l"
+              data="loc"
+              on-type="updateLocation"
+              attr-placeholder="Bar, Hotel, etc"
+              ></autocomplete>
+
+              
+            </div>
+            
+            <div class="form-group">
+              <label class="sr-only" for="b">budget</label>
+
+              <input class="form-control input-lg" placeholder="Budget. ex 5000" id="b" name="b"/>
+
+            </div>
+            
+            
+            <div class="form-group">
+              <label class="sr-only" for="s">service</label>
+                 
+              <autocomplete placeholder="Bar, Restaurant, etc"
+              attr-input-id="s"
+              click-activation="true"
+              attr-input-class="form-control  input-lg"
+              ng-model="s"
+              data="service"
+              on-type="updateService"
+              attr-placeholder="Bar, Hotel, etc"
+              ></autocomplete>
+
+            </div>
+            
+            <br/><br/>
+            <button type="submit" class="btn btn-lg btn-info">Search</button>
+        </form>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="assets/scripts/app.min.js"></script>
+  
+  <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

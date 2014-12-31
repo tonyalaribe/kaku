@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Kaku.com.ng | Overview</title>
+  <meta name="description" content="Kaku.com.ng">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- build:css assets/styles/main.min.css -->
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <!-- endbuild -->
+
+  <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.1/json3.min.js"></script>
+        <![endif]-->
+
+  <!-- build:js assets/scripts/modernizr.min.js -->
+  <script src="assets/lib/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+
+<body class="overview" ng-app="app">
+  <div class="main-nav ">
+    <div class="container">
+      <img src="assets/images/KakuLogo.png" />
+      <div style="display:inline-block;" class="pull-right">
+        <a>Home </a>
+        <a>About</a>
+        <a>Blog </a>
+        <div class="btn-group">
+          <button type="button" class="btn  dropdown-toggle profile-dd" data-toggle="dropdown">
+          <img src="assets/images/Tulips.jpg" class="img-circle profile-dd-pic"/>
+          &nbsp;Anthony Alaribe &nbsp;<span class="fa fa-chevron-down"></span>
+          </button>
+          <ul class="dropdown-menu profile-dd-dd" role="menu">
+            <li><a href="#" class="fa fa-user">&nbsp;&nbsp;&nbsp;Your Profile </a></li>
+            <li><a href="#" class="fa fa-star-o">&nbsp;&nbsp;&nbsp;Favorites </a></li>
+            <li><a href="#" class="fa fa-wrench">&nbsp;&nbsp;&nbsp;Settings </a></li>
+            <li><a href="#" class="fa fa-unlock-alt">&nbsp;&nbsp;&nbsp;Logout </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  
+    <div class="search-bar">
+      <form role="form" class="form-inline">
+          <div class="form-group">
+            <label class="sr-only" for="searchLocation">location</label>
+            <select class="form-control input-lg" id="searchLocation" placeholder="Choose a Location" >
+              <option>Choose a Location</option>
+              <option>2</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label class="sr-only" for="searchBudget">budget</label>
+            <select class="form-control input-lg" id="searchBudget" placeholder="Your Budget Range" >
+              <option>Your Budget Range</option>
+              <option>2</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label class="sr-only" for="searchBudget">service</label>
+            <select class="form-control input-lg" id="searchService" placeholder="Select a Service" >
+              <option>Select a Service</option>
+              <option>2</option>
+            </select>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="submit" class="btn btn-lg btn-info">Search</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="container" style="padding-top:20px;">
+    <div class="above-c">
+      <div>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="col-md-9 ">
+        <div class="  list-group-item details" style="border-radius:0">
+        
+          
+          <div class="details-inner">
+            
+              <h2 align="center">Add a Place</h2>
+
+              <form class="" role="form" enctype="multipart/form-data" method="post" action="/submitplace" ng-controller="NewplaceCtrl">
+                <input type="TEXT" style="display:none" id="e" name="e" value="[[email]]"/>
+              
+                  <div class="form-group col-md-12">
+                      <label for="name" class="sr-only"> Name </label>
+                    <input type="TEXT" class="form-control "
+                                       placeholder="Name"  id="name"
+                                                                     name="name"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="location" class="sr-only"> Location </label>
+                    <input type="TEXT" class="form-control "
+                                       placeholder="Location. ex 'city, state' "
+                                       id="location" name="location" />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="service" class="sr-only"> Service </label>
+                    <input type="TEXT" class="form-control "
+                                       placeholder="Services. ex 'Bar,Restaurant,Diner' " id="service"
+                                                                name="service"
+                                                                />
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="sr-only" for="budget">Optimal Budget</label>
+                    <input type="TEXT" class="form-control "
+                                       placeholder="Optimal Budget ex 5000"
+                                       id="budget" name="budget" />
+                </div>
+
+
+                <div class="form-group col-md-12">
+                    <label for="images" class="" align="center">Images of the
+                        Place  </label>
+                    <br/>
+                    <input type="FILE" name="images" id="images"
+                                                     class="col-md-4"/>
+                    <input type="FILE" name="images" id="images"
+                                                     class="col-md-4"/>
+                    <input type="FILE" name="images" id="images"
+                                                     class="col-md-4" />
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label for="overview" class="sr-only">Overview</label>
+                    <textarea id="overview" name="overview" class="form-control nobr "
+                                            placeholder="Overview" rows="8"
+                                                                  ></textarea>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="address" class="sr-only">Address</label>
+                    <input type="TEXT" id="address" name="address"
+                    class="form-control " placeholder="Address. ex '123 ABC Road' "/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="phone" class="sr-only">Phone No. </label>
+                    <input type="TEXT" id="phone" name="phone"
+                    class="form-control " placeholder="Phone No. ex 08012345678"
+                                          />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="working-hours" class="sr-only">Working Hours</label>
+                    <input type="TEXT" placeholder="Working Hours. ex 'Mon-Fri:6am-9pm'" id="working-hours" name="working-hours" class="form-control"  />
+                </div>
+
+                <div align="center">
+                  
+                  <button class="btn btn-info blue-btn"  ng-show="loggedIn" type="submit">Submit</button>
+                  
+                  <button class="btn btn-info nobr"  ng-hide="loggedIn" style="background-color:#3b5998; border-color:#3b5998;" type="submit"><i class="fa fa-facebook"></i> Log in with facebook</button>
+                  
+                </div>
+
+
+                </form>
+                
+                <div style="clear:both;"></div>
+
+          
+        </div>
+        <br/>
+      </div>
+        
+        
+      <br/>
+      
+    </div>
+    <div class="col-md-3">
+    <img src="assets/images/ad.png" class="img-responsive nobr"/>
+    </div>
+    
+    <div style="clear:both;"></div>
+    <br/><br/>
+    
+    <img src="assets/images/long-ad.png" width="100%" height="auto"/>
+    <br/>
+    
+  </div>
+<br/><br/>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-nav">
+        <a>About Us</a>
+        <a>Career</a>
+        <a >Blog</a>
+        <a >Privacy Policy</a>
+        <a >Terms and Conditions</a>
+      </div>
+      
+      <div class="footer-links">
+        Quick Links to Areas within Lagos: Alagbado. Amuwo Odofin. Ajegunle. Ajah. Bariga. Lekki Phase 1.
+					    Alimosho 	.
+              Ajeromi-Ifelodun 	.
+             	Kosofe 	.
+             	Mushin .
+             	Oshodi-Isolo .
+             	Ojo 	.
+             	Ikorodu .
+             	Surulere .
+            	Agege 	.
+             	Ifako-Ijaye.
+             	Shomolu .
+             	Amuwo-Odofin .
+             	Lagos Mainland .
+             	Ikeja 	.
+             	Eti-Osa 	.
+             	Badagry .
+             	Apapa 	.
+             	Lagos Island .
+             	Epe 	.
+             	Ibeju-Lekki.
+      </div>
+      <div class="footer-copyright">
+        <small>Copyright (c) 2014, Name LTD. All rights reserved.</small>
+        <br/>
+      </div>
+    </div>
+  </footer>
+  <!-- build:js assets/scripts/vendor.min.js -->
+  <script src="assets/lib/jquery/dist/jquery.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js assets/scripts/bootstrap.min.js -->
+  <script src="assets/lib/bootstrap-less/js/affix.js"></script>
+  <script src="assets/lib/bootstrap-less/js/alert.js"></script>
+  <script src="assets/lib/bootstrap-less/js/dropdown.js"></script>
+  <script src="assets/lib/bootstrap-less/js/tooltip.js"></script>
+  <script src="assets/lib/bootstrap-less/js/modal.js"></script>
+  <script src="assets/lib/bootstrap-less/js/transition.js"></script>
+  <script src="assets/lib/bootstrap-less/js/button.js"></script>
+  <script src="assets/lib/bootstrap-less/js/popover.js"></script>
+  <script src="assets/lib/bootstrap-less/js/carousel.js"></script>
+  <script src="assets/lib/bootstrap-less/js/scrollspy.js"></script>
+  <script src="assets/lib/bootstrap-less/js/collapse.js"></script>
+  <script src="assets/lib/bootstrap-less/js/tab.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js assets/scripts/app.min.js -->
+  <script src="assets/lib/angular/angular.js"></script>
+  <script src="assets/lib/angucomplete-alt/angucomplete-alt.js"></script>
+  <script src="assets/lib/ui.bootstrap/ui.bootstrao-tmpl.12.js"></script>
+  <script src="assets/lib/angular-facebook/lib/angular-facebook.js"></script>
+  
+  <!-- endbuild -->
+  <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
