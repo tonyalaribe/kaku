@@ -37,13 +37,6 @@
 }
 
 
-/*.left, .right{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-
-  
-}
 
 .parent-element {
   -webkit-transform-style: preserve-3d;
@@ -51,7 +44,7 @@
   transform-style: preserve-3d;
 }
 
-*/
+
 
 
 .rratings{
@@ -272,7 +265,16 @@ body, html{
 }
 
 @media (min-width: 400px) {
-  .signupForm{
+ .val{
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(50%);
+         -ms-transform: translateY(50%);
+  
+        transform:translateY(50%);
+}
+
+ .signupForm{
     border-radius:1%;
     width:35%;
       input{

@@ -41,6 +41,7 @@ app.config(function($interpolateProvider){
                     $http.post('/login', response);
                     console.log(response);
                 });
+                
                 Facebook.api('/me/picture?height=100&type=square&width=100', function(response) {
                     $scope.pic= response;
                 });
